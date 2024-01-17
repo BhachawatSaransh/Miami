@@ -7,16 +7,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://github.com/BhachawatSaransh/Miami/blob/main/MiamiBeach-SouthBeachSunset-square.jpg'); /* Replace with the path to your local image */
+            background-image: url('https://raw.githubusercontent.com/BhachawatSaransh/Miami/main/MiamiBeach-SouthBeachSunset-square.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
-            margin: 100px;
+            margin: 265px;
+        }
+
+        #question-container {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         #question {
             font-size: 24px;
-            margin-bottom: 20px;
+            color: white;
         }
 
         .response-btn {
@@ -49,22 +56,23 @@
 </head>
 <body>
 
-    <div id="question">Are you in for the Miami Trip?</div>
+    <div id="question-container">
+        <div id="question">Are you in for the Miami Trip?</div>
+    </div>
 
     <button id="yes-btn" class="response-btn" onclick="redirectToBooking()">Yes</button>
     <button id="no-btn" class="response-btn" onmouseover="changePosition()">No</button>
 
     <script>
         function redirectToBooking() {
-            // Simulate redirection to a flight booking website
-            window.location.href = "https://www.example.com/flight-booking";
+
+            window.location.href = "https://www.spirit.com";
         }
 
         function changePosition() {
-            // Change the position randomly on hover
             const noButton = document.getElementById("no-btn");
-            const newPositionX = Math.random() * 200 - 180; // Random value between -50 and 50
-            const newPositionY = Math.random() * 200 - 180; // Random value between -50 and 50
+            const newPositionX = Math.random() * 200 - 300; 
+            const newPositionY = Math.random() * 200 - 300; 
 
             noButton.style.position = "relative";
             noButton.style.top = newPositionY + "px";
